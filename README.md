@@ -803,4 +803,4 @@ hThis program writes the string "and that piece of art is useful" - Dora Korpar,
 </details>
 --- 
 
-#<RTFM> U+1F60A
+#| RTFM |
