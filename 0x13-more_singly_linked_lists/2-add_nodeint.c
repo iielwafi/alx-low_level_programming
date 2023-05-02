@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_node - a function that get a new node at the fist list
+ * add_nodeint - a function that get a new node at the fist list
  *
  * @head: ptr to fist node
  * @n: int n to add a new node
@@ -16,7 +16,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	x = malloc(sizeof(listint_t));
 	if (x == NULL)
 		return (NULL);
-	else
+
 		x->next = *head;
 
 	x->n = n;
