@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index a func displayn new node end position
+ * insert_nodeint_at_index - a func displayn new node end position
  *
  * @head: ptr to the first node
  * @idx: is a index list new node
