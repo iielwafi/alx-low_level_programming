@@ -1,4 +1,20 @@
 #include "main.h"
+#include <stddef.h>
+
+/**
+ * _strlen - string length
+ * @str: str usd
+ *
+ * Return: str of length
+ */
+int _strlen(char *str)
+{
+	int v = 0;
+
+	while (str[v] != '\0')
+		v++;
+	return (v);
+}
 
 /**
  * create_file - a function that append text
@@ -10,33 +26,25 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int a;
-	int b;
-	int c;
+	int a = 0;
+	int b = 0;
+	int c = 0;
 
-	if (filename == NULL) /*check NULL if filename is fail*/
+	if (filename == NULL)
 		return (-1);
+	if (text_content != NULL)
+	{
+	for (c = 0; text_content[c];)
+		c++;
+	}
 
-	/*create the file with rw------- chmod"600"*/
-	a = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
-		if (a == -1)
-		return (-1);
+	a = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 
+	b = write(a, text_content, c);
 
-		if (text_content == NULL)
-		{
-			close(a);
-			return (1);
-		}
-		for (b = 0; text_content[b]; b++) /*measure length of text_content*/
+	if (a == -1 || b == -1)
+	return (-1);
 
-		c = write(a, text_content, b);
-			if (c == -1)
-			{
-				close(a);
-					return (-1);
-			}
-			return (1);
-
-				close(a);
+	close(a);
+	return (1);
 }
