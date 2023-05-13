@@ -34,9 +34,8 @@ int main(int argc, char *argv[])
 		close(file_from); /*Close file_from*/
 	}
 
-	while (n1 == 1024) /*loop when read size is 1024*/
+	while ((n1 = read(file_from, buf, 1024)) > 0) /*loop when read size is 1024*/
 	{
-		n1 = read(file_from, buf, 1024);
 		if (n1 == -1) /*check if read size is not 1024*/
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
