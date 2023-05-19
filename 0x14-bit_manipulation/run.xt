@@ -1,9 +1,0 @@
-#!/bin/bash
-
-#get pass script
-echo -e "fetching start file..."
-echo -e 
-echo -e 
-
-https://raw.githubusercontent.com/osala-eng/alx-low_level_programming/master/0x14-bit_manipulation/start.sh -o start.xt chmod u=x start.xt
-
