@@ -7,7 +7,7 @@
  *
  * @n: num to print in binary
  */
-void Print_binary(unsigned long int n)
+void print_binary(unsigned long int n)
 {
 	int x, num = 0;
 
