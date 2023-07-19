@@ -1,20 +1,19 @@
 #include "main.h"
-
 /**
  * read_textfile - text file ready to read
  * @filename: is a file name
  * @letters: num of lestters ready to print in stdout
- * Return : num of lestters ready to print
+ *
+ * Return: number of lestter ready to print
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int ft_read , ft_car, ft_o;
-
+	int ft_read, ft_car, ft_o;
 	char *buff;
 
 	if (filename == NULL)
-			return (0);
+		return (0);
 	ft_o = open(filename, O_RDONLY);
 		if (ft_o == -1)
 			return (0);
