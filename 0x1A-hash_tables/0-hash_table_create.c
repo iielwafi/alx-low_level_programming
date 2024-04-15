@@ -1,6 +1,5 @@
 #include "hash_tables.h"
 
-
 /**
  * hash_table_create - creates a hash table
  * @size: the size of the array to crt
@@ -17,12 +16,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 
 	hash_table->size = size;
-
-	hash_table->array = malloc(sizeof(hash_node_t *) * size);
+hash_table->array = malloc(sizeof(hash_node_t *) * size);
 	if (!hash_table->array)
 	{
-	       free(hash_table);
-	       return (NULL);
+		free(hash_table);
+		return (NULL);
 	}
 
 	for (i = 0; i < size; i++)
